@@ -1,0 +1,129 @@
+/~/keras-js/lib/Model.js
+Module not found: Error: Can't resolve 'fs' in 'C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib'
+ @ ./~/keras-js/lib/Model.js 211:50-63
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/texture_copy.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\texture_copy.glsl Unexpected token (5:10)
+You may need an appropriate loader to handle this file type.
+| // https://github.com/waylonflinn/weblas
+| 
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/Tensor.js 138:40-70
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/ext/pooling/avgpooling2d.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\ext\pooling\avgpooling2d.glsl Unexpected token (5:10)
+You may need an appropriate loader to handle this file type.
+| // https://github.com/waylonflinn/weblas
+| 
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/ext/pooling/WebGLPooling2D.js 32:48-78
+ @ ./~/keras-js/lib/layers/pooling/MaxPooling2D.js
+ @ ./~/keras-js/lib/layers/pooling/index.js
+ @ ./~/keras-js/lib/layers/index.js
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/ext/core/activation.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\ext\core\activation.glsl Unexpected token (1:10)
+You may need an appropriate loader to handle this file type.
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/ext/core/WebGLActivation.js 29:46-74
+ @ ./~/keras-js/lib/layers/core/Activation.js
+ @ ./~/keras-js/lib/layers/core/index.js
+ @ ./~/keras-js/lib/layers/index.js
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/ext/pooling/maxpooling2d.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\ext\pooling\maxpooling2d.glsl Unexpected token (5:10)
+You may need an appropriate loader to handle this file type.
+| // https://github.com/waylonflinn/weblas
+| 
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/ext/pooling/WebGLPooling2D.js 30:48-78
+ @ ./~/keras-js/lib/layers/pooling/MaxPooling2D.js
+ @ ./~/keras-js/lib/layers/pooling/index.js
+ @ ./~/keras-js/lib/layers/index.js
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/ext/convolutional/conv2d.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\ext\convolutional\conv2d.glsl Unexpected token (33:10)
+You may need an appropriate loader to handle this file type.
+| // SOFTWARE.
+| 
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/ext/convolutional/WebGLConv2D.js 30:50-74
+ @ ./~/keras-js/lib/layers/convolutional/Conv2D.js
+ @ ./~/keras-js/lib/layers/convolutional/index.js
+ @ ./~/keras-js/lib/layers/index.js
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/ext/convolutional/input_transform.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\ext\convolutional\input_transform.glsl Unexpected token (5:10)
+You may need an appropriate loader to handle this file type.
+| // https://github.com/waylonflinn/weblas
+| 
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/ext/convolutional/WebGLConv2D.js 29:60-93
+ @ ./~/keras-js/lib/layers/convolutional/Conv2D.js
+ @ ./~/keras-js/lib/layers/convolutional/index.js
+ @ ./~/keras-js/lib/layers/index.js
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
+errors @ client?cd17:109
+client?cd17:109 ./~/keras-js/lib/ext/normalization/batchnorm.glsl
+Module parse failed: C:\Users\vaclavlangr\Desktop\my-app\node_modules\keras-js\lib\ext\normalization\batchnorm.glsl Unexpected token (5:10)
+You may need an appropriate loader to handle this file type.
+| // https://github.com/waylonflinn/weblas
+| 
+| precision highp float;
+| 
+| varying vec2 outTex;
+ @ ./~/keras-js/lib/ext/normalization/WebGLBatchNorm.js 29:46-73
+ @ ./~/keras-js/lib/layers/normalization/BatchNormalization.js
+ @ ./~/keras-js/lib/layers/normalization/index.js
+ @ ./~/keras-js/lib/layers/index.js
+ @ ./~/keras-js/lib/index.js
+ @ ./src/app/home/home.component.ts
+ @ ./src/app/app.module.ts
+ @ ./src/main.ts
+ @ multi (webpack)-dev-server/client?http://localhost:8080 ./src/main.ts
