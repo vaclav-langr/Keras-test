@@ -11,15 +11,21 @@
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-
-    <button id="refresh-button">REFRESH!</button>
+    <br>
+    <button id="refresh-button">REFRESH CANVAS!</button>
+    <br>
+    <form id="models">
+      <input type="radio" name="model-choice" id="simple" checked>Simple model<br>
+      <input type="radio" name="model-choice" id="pretrained">Trained by KerasJS author model<br>
+    </form>
     <br>
     <canvas id="fullSizeCanvas" width="280" height="280"></canvas>
     <canvas id="smallSizeCanvas" width="28" height="28"></canvas>
+    <br>
+    <label id="predicted"></label>
   </body>
 
   <script>
-    // You can also require other files to run in this process
     require('./renderer.js')
   </script>
 </html>

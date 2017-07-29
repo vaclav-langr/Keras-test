@@ -53,3 +53,7 @@ __build__/**
 # IDE #
 .idea/
 *.swp
+
+# Data #
+test
+train

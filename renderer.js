@@ -5,9 +5,9 @@
 var keras = require('keras-js');
 var model = new keras.Model({
     filepaths: {
-        model: 'model/model.json',
-        weights: 'model/model_weights.buf',
-        metadata: 'model/model_metadata.json'
+        model: 'models/simple_model/model.json',
+        weights: 'models/simple_model/model_weights.buf',
+        metadata: 'models/simple_model/model_metadata.json'
     },
     gpu: true
 });
@@ -21,6 +21,29 @@ contextFull.strokeStyle = '#000000';
 
 var x = 0;
 var y = 0;
+
+function switchModel() {
+    if(document.getElementById("simple").checked) {
+        model = new keras.Model({
+            filepaths: {
+                model: 'models/simple_model/model.json',
+                weights: 'models/simple_model/model_weights.buf',
+                metadata: 'models/simple_model/model_metadata.json'
+            },
+            gpu: true
+        });
+    }
+    if(document.getElementById("pretrained").checked) {
+        model = new keras.Model({
+            filepaths: {
+                model: 'https://transcranial.github.io/keras-js-demos-data/mnist_cnn/mnist_cnn.json',
+                weights: 'https://transcranial.github.io/keras-js-demos-data/mnist_cnn/mnist_cnn_weights.buf',
+                metadata: 'https://transcranial.github.io/keras-js-demos-data/mnist_cnn/mnist_cnn_metadata.json'
+            },
+            gpu: true
+        });
+    }
+}
 
 function refresh() {
 	contextFull.clearRect(0,0,contextFull.canvas.width, contextFull.canvas.height);
@@ -49,19 +72,34 @@ function paint() {
 	contextFull.stroke();
 }
 
+function findMaxIndex(data) {
+    var index = -1;
+    var value = -Infinity;
+    for(i = 0; i < data.length; i++) {
+        if(value < data[i]) {
+            index = i;
+            value = data[i];
+        }
+    }
+    return index;
+}
+
 async function predictNumber() {
     var inputData = {
         'input': new Float32Array(28*28)
     };
     var imageData = Float32Array.from(contextSmall.getImageData(0,0,28,28).data);
-    for (let i = 0, len = imageData.length; i < len; i += 4) {
+    for (i = 0, len = imageData.length; i < len; i += 4) {
         inputData.input[i / 4] = imageData[i + 3] / 255
     }
     var outputData = await model.predict(inputData);
-    console.log(outputData.output)
+    var predicted = findMaxIndex(outputData.output);
+    document.getElementById('predicted').innerHTML = predicted;
 }
 
 document.getElementById('refresh-button').addEventListener('click', refresh);
 document.getElementById('fullSizeCanvas').addEventListener('mousedown', startDraw);
 document.getElementById('fullSizeCanvas').addEventListener('mousemove', draw);
 document.getElementById('fullSizeCanvas').addEventListener('mouseup', stopDraw);
+document.getElementById('simple').addEventListener('change', switchModel);
+document.getElementById('pretrained').addEventListener('change', switchModel);

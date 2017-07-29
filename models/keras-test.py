@@ -8,7 +8,7 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from scipy import misc
 
-layers = 4
+layers = 1
 data_path = ""
 
 
@@ -41,10 +41,14 @@ test_labels = keras.utils.to_categorical(test_labels, num_classes=10)
 
 model = Sequential()
 for i in range(layers):
-    model.add(Dense(784, activation='sigmoid', input_shape=(784,)))
+    model.add(Dense(784, activation='relu', input_shape=(784,)))
     model.add(Dropout(0.2))
 model.add(Dense(10, activation='softmax'))
 
 model.compile(loss='categorical_crossentropy', metrics=['accuracy'], optimizer='rmsprop')
 
 model.fit(train_data, train_labels, epochs=10, validation_data=(test_data, test_labels))
+
+model.save_weights('model.hdf5')
+with open('model.json', 'w') as f:
+    f.write(model.to_json())
