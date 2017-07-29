@@ -1,0 +1,13 @@
+canvas {
+    border-style: solid;
+}
+
+.container{
+    display: flex;
+}
+.fixed{
+    width: 200px;
+}
+.flex-item{
+    flex-grow: 1;
+}
