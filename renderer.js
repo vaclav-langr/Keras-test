@@ -33,6 +33,16 @@ function switchModel() {
             gpu: true
         });
     }
+    if(document.getElementById("simple2").checked) {
+        model = new keras.Model({
+            filepaths: {
+                model: 'models/simple2_model/model.json',
+                weights: 'models/simple2_model/model_weights.buf',
+                metadata: 'models/simple2_model/model_metadata.json'
+            },
+            gpu: true
+        });
+    }
     if(document.getElementById("pretrained").checked) {
         model = new keras.Model({
             filepaths: {
@@ -47,7 +57,7 @@ function switchModel() {
 
 function refresh() {
 	contextFull.clearRect(0,0,contextFull.canvas.width, contextFull.canvas.height);
-    contextSmall.clearRect(0,0,contextSmall.canvas.width, contextSmall.canvas.height);
+  contextSmall.clearRect(0,0,contextSmall.canvas.width, contextSmall.canvas.height);
 }
 
 function startDraw() {
@@ -92,7 +102,7 @@ async function predictNumber() {
     for (i = 0, len = imageData.length; i < len; i += 4) {
         inputData.input[i / 4] = imageData[i + 3] / 255
     }
-    var outputData = await model.predict(inputData);
+    var outputData = await model.predict(inputData); 
     var predicted = findMaxIndex(outputData.output);
     document.getElementById('predicted').innerHTML = predicted;
 }
@@ -102,4 +112,5 @@ document.getElementById('fullSizeCanvas').addEventListener('mousedown', startDra
 document.getElementById('fullSizeCanvas').addEventListener('mousemove', draw);
 document.getElementById('fullSizeCanvas').addEventListener('mouseup', stopDraw);
 document.getElementById('simple').addEventListener('change', switchModel);
+document.getElementById('simple2').addEventListener('change', switchModel);
 document.getElementById('pretrained').addEventListener('change', switchModel);
